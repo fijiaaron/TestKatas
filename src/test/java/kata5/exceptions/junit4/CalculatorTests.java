@@ -23,4 +23,11 @@ public class CalculatorTests
 		int result = calculator.compute("l", "+", "2");
 		assertEquals(3, result);
 	}
+
+	@Test(expected = ArithmeticException.class)
+	public void testDivideByZero()
+	{
+		Calculator calculator = new Calculator();
+		int result = calculator.divide(1, 2);
+	}
 }
